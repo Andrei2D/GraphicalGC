@@ -89,11 +89,13 @@ vector<Punct> GrahamScan (const vector <Punct>& vecPct, bool Graphical = false)
     }
 
 
-    if(Graphical) cleardevice();
-    if(Graphical) drawPoints(vctSrt);
-    if(Graphical) drawLineMultiple(frontiera,0,frontiera.size()-1);
-
-    onPressReset();
+    if(Graphical)
+        {
+            cleardevice();
+            drawPoints(vctSrt);
+            drawLineMultiple(frontiera,0,frontiera.size()-1);
+            onPressReset();
+        }
 
     return frontiera;
 }
